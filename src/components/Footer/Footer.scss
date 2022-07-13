@@ -1,0 +1,27 @@
+@import "../../styles/partials/fonts";
+@import "../../styles/partials/variables";
+@import "../../styles/partials/mixins";
+
+
+.footer {
+    margin: 2.5rem 0 2.5rem 0;
+  
+
+    @include tablet {
+        margin: 2.5rem 0 2.5rem 0;
+
+        @include desktop {
+            margin: 4.1875rem 0 3rem 0;
+
+        }
+    }
+
+
+    &__text {
+        text-align: center;
+        color: $secondary-text-color;
+
+        @include tablet {
+        }
+    }   
+}

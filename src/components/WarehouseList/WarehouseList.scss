@@ -1,0 +1,198 @@
+@import "../../styles/partials/fonts";
+@import "../../styles/partials/variables";
+@import "../../styles/partials/mixins";
+
+
+.whList {
+  // styling for individual list items
+  .whLi {
+    border-top: 1px solid $secondary-grey;
+    @include tablet {
+      display: flex;
+      justify-content: space-between;
+      padding: 0rem 1rem;
+      border-top: none;
+      border-bottom: 1px solid $secondary-grey;
+    }
+
+    &__box {
+      display: flex;
+      margin: 0rem 1rem;
+      @include tablet {
+        margin: 0;
+        width: 80%;
+      }
+    }
+    &__subbox {
+      width: 50%;
+      @include tablet {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 50%;
+      }
+    }
+    &__item {
+      margin: 1rem;
+      @include tablet {
+        width: 50%;
+        margin-left: 0rem;
+      }
+      &--link {
+        color: $interactive-color;
+        font-weight: $semi-bold;
+        @include tablet {
+          margin-left: 1rem;
+        }
+      }
+    }
+    &__label {
+      text-transform: uppercase;
+      font-size: 12px;
+      line-height: 18px;
+      color: $secondary-text-color;
+      margin-bottom: 0.25rem;
+      @include tablet {
+        display: none;
+      }
+    }
+    &__link-box {
+      display: flex;
+      align-items: center;
+    }
+    &__info {
+      line-height: 20px;
+      font-size: 13px;
+    }
+    &__link {
+      line-height: 20px;
+      font-size: 13px;
+      color: $interactive-color;
+      text-decoration: none;
+    }
+    // &__link-icon {
+
+    // }
+    &__actions {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 2rem;
+      margin: 0rem 2rem;
+      @include tablet {
+        width: 20%;
+        justify-content: flex-end;
+        align-items: center;
+        margin: 0;
+        padding: 1rem;
+      }
+      .iconBtn {
+        cursor: pointer;
+        @include tablet {
+          height: 1.5rem;
+          margin-left: 1.5rem;
+        }
+      }
+    }
+  }
+}
+
+// HEADER SECTION
+.warehousePage-subhead {
+  padding: 2.5rem 2rem 2rem 2rem;
+  @include tablet {
+    padding: 2rem 3rem 1.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .warehousePage-subhead__right {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.5rem;
+    @include tablet {
+      flex-direction: row;
+      align-items: center;
+      margin-top: 0;
+    }
+
+    .search {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border: 1px solid $secondary-grey;
+      border-radius: 20px;
+      height: 2.25rem;
+      padding: 0px 1rem;
+      @include tablet {
+        height: 2.375rem;
+      }
+
+      &__input {
+        border: none;
+        width: 100%;
+        outline: none;
+        &::placeholder {
+          font-family: $font;
+        }
+      }
+    }
+    .search:focus-within {
+      border-color: $interactive-color;
+    }
+
+    .newWarehouse-btn {
+      background-color: $interactive-color;
+      color: white;
+      border-radius: 20px;
+      border: none;
+      height: 2.25rem;
+      font-family: $font;
+      font-weight: 600;
+      padding: 0rem 1rem;
+      margin-top: 1rem;
+      cursor: pointer;
+      width: 100%;
+
+      @include tablet {
+        height: 2.375rem;
+        margin-top: 0;
+        margin-left: 1rem;
+        font-size: 14px;
+        line-height: 22px;
+        font-weight: 600;
+      }
+      &:hover {
+        background-color: $CTA-hover-color;
+      }
+    }
+  }
+}
+
+// LABEL ROW COMPONENT FOR TABLET/DESKTOP
+
+.labelsRow {
+  display: none;
+  padding: 0.5rem 2rem;
+  background-color: $page-background-color;
+  opacity: 0.7;
+
+  @include tablet {
+    display: flex;
+  }
+  .labelsRow__item {
+    width: 20%;
+    display: flex;
+    align-items: center;
+    &--action {
+      justify-content: flex-end;
+    }
+
+    .labelsRow__label {
+      text-transform: uppercase;
+      font-size: 12px;
+      line-height: 18px;
+      color: $secondary-text-color;
+    }
+  }
+}

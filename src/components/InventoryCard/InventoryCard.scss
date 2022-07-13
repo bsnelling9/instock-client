@@ -1,0 +1,205 @@
+@import "../../styles/partials/mixins";
+@import "../../styles/partials/variables";
+@import "../../styles/partials/fonts";
+
+.cardList {
+    margin: 0rem 1rem 0 1rem;
+    background-color: $global-white-color;
+    // padding: -5rem 0rem 1.6875rem 0rem;
+    // box-shadow: 0px 2px 5px rgba(19, 24, 44, 0.1);
+  
+    @include tablet {
+      margin: 0rem 2rem 0rem 2rem;
+      padding: 1rem 0rem 0rem 0rem;
+
+      @include desktop {
+        margin: 0rem 8.125rem 0rem 8.125rem;
+      }
+    }
+  
+    .card {
+      border-top: 1px solid $secondary-grey;
+  
+      @include tablet {
+        @include display-flex(row, space-between, center);
+        padding: 0rem 1rem;
+        border-top: none;
+        border-bottom: 1px solid $secondary-grey;
+      }
+
+      &__box {
+        @include display-flex(row, flex-start, none);
+        margin: 0rem 0rem;
+
+        @include tablet {
+          margin: 0;
+          width: 80%;
+        }
+      }
+
+      
+
+      &__subbox {
+        width: 50%;
+
+        @include tablet {
+          @include display-flex(row, flex-start, center);
+          width: 50%;
+        }
+      }
+
+      &__item {
+        margin-bottom: 1rem;
+        @include tablet {
+          width: 50%;
+          margin-left: 0rem;
+          
+        }
+        &--link {
+          color: $interactive-color;
+          font-weight: $semi-bold;
+          @include tablet {
+            margin-left: 1rem;
+            
+          }
+        }
+      }
+
+      &__label {
+        text-transform: uppercase;
+        font-size: 11px;
+        line-height: 18px;
+        color: $secondary-text-color;
+        margin-bottom: .25rem;
+
+        &--padding {
+          margin-top: 1.125rem;
+        }
+
+
+        @include tablet {
+          display: none;
+
+          
+        }
+      }
+
+      &__link-box {
+        @include display-flex(row, none, center);
+      }
+
+      &__info {
+        line-height: 20px;
+        font-size: 13px;
+
+        @include tablet {
+          font-size: 14px;
+        }
+      }
+
+      
+      &__info--category {
+
+        @include tablet {
+          padding-left: 2rem;
+        }
+      }
+
+      &__info--qty {
+        
+        @include tablet {
+          padding-left: 40%;
+          text-align: left;
+
+          @include desktop {
+            padding-left: 45%;
+          }
+        }
+      }
+
+      &__info--warehouse {
+        
+        @include tablet {
+          text-align: end;
+          margin-right: -1.5rem;
+
+        }
+      }
+
+      &__status {
+        @include display-flex(none, center, center);
+        background-color: #15846315;
+        width: 4rem;
+        height: 1.5rem;
+        color: $instock-label-color; 
+        text-transform: uppercase;
+        font-size: 11px;
+        margin-top: 0.5rem;
+        border-radius: 0.75rem;
+
+        @include tablet {
+          width: 4.5rem;
+          height: 1.65rem;
+          font-size: 12px;
+          margin-left: 1rem;
+          margin-right: 0.125rem;
+        }
+      }
+
+      &__status--out {
+        @include display-flex(none, center, center);
+        background-color: #c945152a;
+        width: 5.625rem;
+        height: 1.5rem;
+        color: $alert-color; 
+        text-transform: uppercase;
+        font-size: 11px;
+        margin-top: 0.35rem;
+        border-radius: 0.75rem;
+
+        @include tablet {
+          height: 1.65rem;
+          width: 5.125rem;
+          margin-left: 0.875rem;
+          font-size: .675rem;
+        }
+      }
+
+      &__link {
+        line-height: 20px;
+        font-size: 13px;
+        color: $interactive-color;
+        
+
+        &-anchor {
+          text-decoration: none;
+
+          &:hover {
+            text-decoration: underline;
+          }
+
+          &:active {
+            color: $interactive-color;
+          }
+        }
+      }
+
+      &__actions {
+        @include display-flex(row, space-between, none);
+        padding-bottom: .5rem;
+        @include tablet {
+          width: 20%;
+          @include display-flex(row, flex-end, center);
+          margin-bottom: 0.5rem;
+        }
+
+        .iconBtn {
+          @include tablet {
+            height: 1.5rem;
+            margin-left: 1.5rem;
+          }
+        }
+
+      }
+    }
+}

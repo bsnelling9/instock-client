@@ -1,0 +1,229 @@
+@import "../../styles/partials/fonts";
+@import "../../styles/partials/variables";
+@import "../../styles/partials/mixins";
+
+.addInventory {
+  @include component-box;
+  margin-top: -4.85rem;
+
+  @include tablet {
+    margin: 2rem;
+    margin-top: -6rem;
+  }
+
+  @include desktop {
+    margin: 2rem 8.125rem;
+    margin-top: -6rem;
+  }
+}
+
+.addInventoryHeader {
+  padding: 1.65rem 1.5rem 0.825rem 1.5rem;
+  display: flex;
+  border-bottom: 1px solid $secondary-grey;
+
+  @include tablet {
+    display: flex;
+    align-items: center;
+    padding: 1.65rem 2rem 0.825rem 2rem;
+  }
+
+  &__heading {
+    padding: 0.5rem;
+    text-transform: capitalize;
+  }
+}
+
+.addInventoryForm {
+  &__fields-container {
+    padding: 1.5rem;
+
+    @include tablet {
+      display: flex;
+      padding: 2rem;
+    }
+  }
+
+  &__fields-container-left {
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+      border-right: 1px solid $secondary-grey;
+      padding-right: 2rem;
+    }
+  }
+
+  &__fields-container-right {
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+      padding-left: 2rem;
+    }
+  }
+
+  &__dropdown {
+    appearance: none;
+    @include form-input;
+    min-height: 2.25rem;
+    width: 100%;
+    background-image: url("../../assets/Icons/arrow_drop_down-24px.svg");
+    background-repeat: no-repeat;
+    background-position-x: 95%;
+    background-position-y: 5px;
+
+    &:active {
+      color: $interactive-color;
+    }
+
+    &:invalid {
+      color: $alert-color;
+    }
+  }
+
+  &__heading {
+    padding-bottom: 1.5rem;
+  }
+
+  &__field {
+    padding-bottom: 1rem;
+  }
+
+  &__input {
+    @include form-input;
+    min-height: 2.25rem;
+    width: 100%;
+  }
+
+  &__label-text {
+    padding-bottom: 0.25rem;
+  }
+
+  &__textarea {
+    @include form-input;
+    min-height: 9rem;
+    padding-top: 0.5rem;
+    width: 100%;
+
+    @include tablet {
+      min-height: 12.5rem;
+    }
+  }
+
+  &__status {
+    @include font-size($h3-font-sizes);
+    display: flex;
+    padding-bottom: 0.5rem;
+    padding-top: 0.25rem;
+    justify-content: space-between;
+  }
+
+  &__statusContainer {
+    display: flex;
+    gap: 0.5rem;
+    @include font-size($h3-font-sizes);
+  }
+
+  &__statusRadio {
+    width: 50%;
+    display: flex;
+    align-items: center;
+  }
+
+  &__statusRadio input[type="radio"] {
+    cursor: pointer;
+    .errorStatus {
+      color: $alert-color;
+    }
+  }
+
+  &__statusRadio label {
+    display: inline-block;
+    @include font-size($h3-font-sizes);
+    padding: 4px;
+    color: $secondary-text-color;
+  }
+
+  &__statusRadio input[type="radio"]:checked + label {
+    color: $global-text-color;
+  }
+
+  &__statusRadio label:check {
+    color: $global-text-color;
+  }
+
+  &__statusRadio .errorStatus {
+    color: $alert-color;
+  }
+}
+
+.buttonContainer {
+  display: flex;
+  gap: 1rem;
+  background-color: $page-background-color;
+  height: 5rem;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+
+  @include tablet {
+    display: flex;
+    margin-left: auto;
+    justify-content: right;
+  }
+}
+
+.buttonPrimary {
+  background-color: $interactive-color;
+  color: $global-white-color;
+  border: none;
+  height: 2.25rem;
+  border-radius: 1.25rem;
+  padding: 0 1rem;
+  outline: none;
+  @include font-size($h3-font-sizes);
+  width: 100%;
+  cursor: pointer;
+
+  &:hover {
+    outline: none !important;
+    background-color: $CTA-hover-color;
+  }
+
+  @include tablet {
+    height: 2.375rem;
+    order: 2;
+    flex-basis: auto;
+    width: auto;
+  }
+}
+
+.buttonSecondary {
+  background-color: $global-white-color;
+  color: $secondary-text-color;
+  border: $secondary-grey solid 0.0625rem;
+  height: 2.25rem;
+  border-radius: 1.25rem;
+  padding: 0 1rem;
+  outline: none;
+  @include font-size($h3-font-sizes);
+  width: 100%;
+  cursor: pointer;
+
+  &:hover {
+    outline: none !important;
+    color: $interactive-color;
+    border: $interactive-color solid 0.0625rem;
+  }
+
+  @include tablet {
+    height: 2.375rem;
+    order: 1;
+    width: auto;
+  }
+}
+
+.error {
+  border: 0.0625rem solid $alert-color;
+}

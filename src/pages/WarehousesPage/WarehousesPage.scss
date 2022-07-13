@@ -1,0 +1,16 @@
+@import "../../styles/partials/fonts";
+@import "../../styles/partials/variables";
+@import "../../styles/partials/mixins";
+
+.warehousePage {
+  @include component-box;
+  @include tablet {
+    margin: 2rem;
+    margin-top: -6rem;
+
+  }
+  @include desktop {
+    margin: 2rem 8rem;
+    margin-top: -6rem;
+  }
+}

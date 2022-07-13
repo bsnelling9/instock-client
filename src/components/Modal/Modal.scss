@@ -1,0 +1,103 @@
+@import "../../styles/partials/fonts";
+@import "../../styles/partials/variables";
+@import "../../styles/partials/mixins";
+
+
+.overlay {
+  // display: none;
+  @include tablet {
+    display: flex;
+  }
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(0, 0, 0, 0.7);
+  z-index: 9001;
+}
+
+.modal {
+  height: 90vh; // NOT SURE HERE
+  width: 90vw; // NOT SURE HERE
+  position: fixed;
+  z-index: 9001;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 5px;
+  padding: 1rem;
+  @include tablet {
+    height: 17rem;
+    width: 42rem;
+    padding: 1rem 1rem 2rem 1rem;
+  }
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  &__core {
+    width: 95%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @include tablet {
+      width: 80%;
+    }
+  }
+
+  &__iconBox {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__closeIcon {
+    cursor: pointer;
+  }
+
+  &__content {
+    width: 80%;
+    .modal__title {
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__btnBox {
+    display: flex;
+    justify-content: flex-end;
+
+    .modal__btn {
+      border-radius: 20px;
+      font-family: $font;
+      border: none;
+      padding-left: 16px;
+      padding-right: 16px;
+      height: 36px;
+      width: 50%;
+      @include tablet {
+        height: 38px;
+        width: 72px;
+      }
+      &--cancel {
+        background-color: $global-white-color;
+        border: 1px solid $secondary-grey;
+        &:hover {
+          color: $interactive-color;
+          border-color: $interactive-color;
+        }
+      }
+      &--delete {
+        background-color: $alert-color;
+        color: $global-white-color;
+        margin-left: 1rem;
+        &:hover {
+          background-color: $nav-background-color;
+        }
+      }
+
+    }
+  }
+}

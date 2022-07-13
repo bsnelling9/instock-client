@@ -1,0 +1,89 @@
+@import '../../styles/partials/mixins';
+@import '../../styles/partials/variables';
+
+
+
+.nav {
+    background-color: $nav-background-color;
+
+
+    &__container {
+        height: 14.5rem;
+        width: 100%;
+        padding: 1.5rem 1rem 0 1rem;
+
+    @include tablet {
+        height: 12.5rem;
+        @include display-flex(row, space-between, flex-start);
+        padding: 1.6875rem 2rem 0 2rem;
+
+        @include desktop {
+            width: 80rem;
+            margin: 0 auto;
+            padding: 1.6875rem 8.125rem 0 8.125rem;
+        }
+    }
+    }
+
+
+    &__logo-link {
+        text-decoration: none;
+
+        @include tablet {
+            margin-top: 0.5rem;  
+        }
+    }
+
+    &__logo-img {
+        width: 8.0369rem;
+        height: 1.75rem;
+        margin: auto;
+        display: block;
+
+    }
+
+    &__list {
+        @include display-flex (row, space-around, none);
+        margin-top: 1.5rem;
+
+        @include tablet {
+            margin-top: 0;
+
+        }
+
+
+        &-link {
+            // background-color: $global-text-color;
+            color: $global-white-color;
+            text-decoration: none;
+            padding: 0.875rem 0;
+            border-radius: 1.25rem;
+            width: 100%;
+
+            @include tablet {
+                // width: 8.625rem;
+                padding: .75rem 1.125rem;
+                border-radius: 1.65rem;
+
+            }
+
+            &:hover {
+                text-decoration: underline;
+            }
+
+            // &:focus {
+            //     background-color: $global-text-color;
+            // }
+
+            &--active {
+                background-color: $global-text-color;
+            }
+
+
+        }
+
+        &-text {
+            text-align: center;
+        }
+    }
+}

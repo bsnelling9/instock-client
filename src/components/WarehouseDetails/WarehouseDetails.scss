@@ -1,0 +1,125 @@
+@import "../../styles/partials/fonts";
+@import "../../styles/partials/variables";
+@import "../../styles/partials/mixins";
+
+
+
+.labelT {
+  text-transform: uppercase;
+  color: $secondary-text-color;
+}
+
+// TOP section
+.details {
+  @include component-box;
+  margin-top: -4.85rem;
+
+  @include tablet {
+    margin: 2rem;
+    margin-top: -6rem;
+
+  }
+
+  @include desktop {
+    margin: 2rem 10rem;
+    margin-top: -6rem;
+  }
+
+  .details-top {
+    display: flex;
+    justify-content: space-between;
+    padding: 2.5rem 1.5rem 2rem 1.5rem;
+
+    @include tablet {
+      padding: 2rem 2.25rem 1.5rem 2.25rem;
+    }
+
+    &__link {
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      color: $global-text-color;
+
+      .details-top__title {
+        margin-left: 0.5rem;
+      }
+    }
+
+    &__iconBox {
+      background-color: $interactive-color;
+      border-radius: 100%;
+      height: 36px;
+      width: 36px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+
+      @include tablet {
+        height: 38px;
+        width: 81px;
+        border-radius: 20px;
+      }
+
+      .details-top__icon {
+        height: 24px;
+        filter: brightness(100);
+
+        @include tablet {
+          height: 18px;
+        }
+      }
+
+      .details-top__edit {
+        display: none;
+        color: $global-white-color;
+
+        @include tablet {
+          display: flex;
+          margin-left: 5px;
+        }
+      }
+
+      &:hover {
+        background-color: $CTA-hover-color;
+      }
+    }
+  }
+}
+
+// warehouse address and contact info section
+
+.warehouse-info {
+  border-top: 1px solid $secondary-grey;
+  padding: 2rem;
+
+  @include tablet {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .details__address {
+    margin-bottom: 3rem;
+
+    @include tablet {
+      width: 50%;
+      margin-bottom: 0;
+      border-right: 1px solid $secondary-grey;
+    }
+  }
+
+
+  .details__contacts {
+    display: flex;
+
+    @include tablet {
+      width: 60%;
+      margin-left: 3rem;
+    }
+
+    .details__contact {
+      width: 50%;
+    }
+  }
+
+}

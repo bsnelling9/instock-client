@@ -1,0 +1,54 @@
+@use "./styles/partials/reset"as *;
+@import "./styles/partials/variables";
+@import "./styles/partials/mixins";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font;
+  color: $global-text-color;
+  background-color: $page-background-color;
+}
+
+h1 {
+  @include font-size($h1-font-sizes);
+  font-weight: $semi-bold;
+}
+
+h2 {
+  @include font-size($h2-font-sizes);
+  font-weight: $semi-bold;
+}
+
+h3 {
+  @include font-size($h3-font-sizes);
+  font-weight: $semi-bold;
+}
+
+h4 {
+  @include font-size($h4-font-sizes);
+  font-weight: $semi-bold;
+}
+
+p {
+  @include font-size($p1-font-sizes);
+  font-weight: $regular;
+}
+
+.p2 {
+  @include font-size($p2-font-sizes);
+  font-weight: $regular;
+}
+
+.p3 {
+  @include font-size($p3-font-sizes);
+  font-weight: $regular;
+}
+
+form,
+input,
+textarea {
+  font-family: $font;
+}
