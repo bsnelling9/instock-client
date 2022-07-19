@@ -107,7 +107,13 @@ export default class EditInventory extends Component {
         return(
         <div className="editInventory">
             <div className="editInventoryHeader">
-                <img className="editInventoryHeader__icon" src={arrowBack} onClick={(event) => (window.location.href = `/inventory/${this.state.id}`)} alt="arrow back"></img>
+                <Link className="addInventoryHeader__link" to={"/inventory"}>
+                <img
+                    className="addInventoryHeader__icon"
+                    src={arrowBack}
+                    alt="arrow back"
+                />
+                </Link>
                 <h1 className="editInventoryHeader__heading">edit inventory item</h1>
             </div>
             <div className="editInventoryForm">

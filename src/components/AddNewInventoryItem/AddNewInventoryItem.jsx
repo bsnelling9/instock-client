@@ -141,7 +141,7 @@ export default class AddNewInventoryItem extends Component {
                 className="addInventoryHeader__icon"
                 src={arrowBack}
                 alt="arrow back"
-              ></img>
+              />
             </Link>
             <h1 className="addInventoryHeader__heading">Add inventory item</h1>
           </div>
