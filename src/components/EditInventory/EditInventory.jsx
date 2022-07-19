@@ -2,7 +2,7 @@ import "./EditInventory.scss";
 import { Component } from "react";
 import arrowBack from "../../assets/Icons/arrow_back-24px.svg"
 import axios from "axios";
-
+import { Link } from "react-router-dom";
 
 export default class EditInventory extends Component {
 
@@ -108,11 +108,11 @@ export default class EditInventory extends Component {
         <div className="editInventory">
             <div className="editInventoryHeader">
                 <Link className="addInventoryHeader__link" to={"/inventory"}>
-                <img
-                    className="addInventoryHeader__icon"
-                    src={arrowBack}
-                    alt="arrow back"
-                />
+                    <img
+                        className="addInventoryHeader__icon"
+                        src={arrowBack}
+                        alt="arrow back"
+                    />
                 </Link>
                 <h1 className="editInventoryHeader__heading">edit inventory item</h1>
             </div>
